@@ -32,8 +32,12 @@ var result = alphabetSoup("my string oh my");
 console.log(result) // "ghimmnorstyy"
 
 **/
-
+//Input: any string of all letters
+//Output: a string, containing letters in alphabetical order
 function alphabetSoup(str) {
-	//Your code here
-	
+	//examine the string for individual letters
+	//reorder the string
+	//return the string
+		 var newString = str.split("").sort().join("").trim();
+  return newString;
 }
