@@ -14,9 +14,25 @@
 			  	<li>Adjective: <input type="text" id="adjective">
 			  	<li>A Person Name: <input type="text" id="person">
 			 </ul>
-			 <button id="lib-button">Lib it!</button>
+			 <button id="lib-button" onclick="makeMadLib()">Lib it!</button>
 			  
 			 <div id="story"></div>  
+
+			 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+			 <script>	
+	function makeMadLib(){
+	var noun = $("#noun").val();
+	var adjective = $("#adjective").val();
+	var person = $("#person").val();
+	$("#story").append("<p>" + person + " really likes " + adjective + " " + noun + ".</p>");
+	var story = {};
+	story.noun = noun;
+	story.adjective = adjective;
+	story.person = person;
+	console.log(story);
+}			 
+			</script>
 		</body>
 	</html>
 	

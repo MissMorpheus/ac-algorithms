@@ -25,7 +25,20 @@
 //palindrome("1 eye for of 1 eye.") should return false.
 //palindrome("0_0 (: /-\ :) 0-0") should return true.
 
+//Input: a string that can have numbers letters symbols or spaces
+//Output: boolean
+
 function palindrome(str) {
-	//your code here
-}
+	//remove all non-alphanumeric symbols and spaces, and change our string to lowercase.
+	//a conditional statement to see if the string is equal backwards to the string forwards.
+	//if the string is strictly equal then return ture
+	//else return false.
+  var cleanStr = str.replace(/\W|_/g,"").toLowerCase();
+  var checkStr = cleanStr.split("").reverse("").join("");
+  
+  if (cleanStr === checkStr){
+    return true;
+  } else{
+    return false;
+  }
 
