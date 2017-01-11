@@ -9,13 +9,29 @@
 //For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
 
 //The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
-
+//Input-string of missing pairing element
+//Output-the pairs of arrays inside one parent array
 function pairElement(str) {
-  //your code here
+  var parent = [];
+  //create the parent array
+  //seperate the string into an array
+  //figure out which partner to add depending on the letter
+  //conditional statemant to figure out the partner
+  //push that partner letter
+  var dna = {
+    T: "A",
+    A: "T",
+    G: "C",
+    C: "G",
+  };
+  var newStr = str.split("");
+  for (var i = 0; i < newStr.length; i++){
+    parent.push(newStr[i],dna[newStr[i]])
+  }
+                return parent;
 }
 
-pairElement("GCG");
-
+console.log(pairElement("GCG"));
 //TEST CASES
 //pairElement("ATCGA") should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].
 //pairElement("TTGAG") should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]].
