@@ -18,8 +18,21 @@
 // findLongestWord("What is the average airspeed velocity of an unladen swallow") should return 8.
 // findLongestWord("What if we try a super-long word such as otorhinolaryngology") should return 19.
 
-
+//Input:String
+//Output:a number equal to the longest word in the array
 function findLongestWord(str) {
-  //your code here
+  
+  var wordArray = str.split(' ');
+  
+  var longestWord = 0;
+
+  for(var i = 0; i < wordArray.length; i++) {
+    if(wordArray[i].length > longestWord) {
+      longestWord = wordArray[i].length;
+    }
+  }
+  return longestWord;
+ 
 }
 
+findLongestWord("The quick brown fox jumped over the lazy dog")
